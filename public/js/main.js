@@ -23,11 +23,6 @@ openBooks.onclick = function() {
 closeBooks.onclick = function() {
     booksModal.style.display = "none";
 }
-window.onclick = function(event) {
-  if (event.target == booksModal) {
-    booksModal.style.display = "none";
-  }
-}
 
 // Books modal manipulation -->
 
@@ -36,11 +31,6 @@ openCharacters.onclick = function() {
 }
 closeCharacters.onclick = function() {
     charactersModal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == charactersModal) {
-    charactersModal.style.display = "none";
-  }
 }
 
 // Characters modal manipulation -->
@@ -53,10 +43,15 @@ openHouses.onclick = function() {
 closeHouses.onclick = function() {
     housesModal.style.display = "none";
 }
+
+// Houses modal manipulation -->
+
+// If clicked outside of modal
+
 window.onclick = function(event) {
-  if (event.target == housesModal) {
+  if (event.target === booksModal || event.target === charactersModal || event.target === housesModal) {
+    booksModal.style.display = "none";
+    charactersModal.style.display = "none";
     housesModal.style.display = "none";
   }
 }
-
-// Houses modal manipulation -->

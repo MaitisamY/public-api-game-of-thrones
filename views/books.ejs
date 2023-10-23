@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of thrones | Books</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Authors</th>
+                        <th>Pages</th>
+                        <th>Publisher</th>
+                        <th>Released</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= locals.name %></td>
+                        <td><%= locals.authors %></td>
+                        <td><%= locals.pages %></td>
+                        <td><%= locals.publisher %></td>
+                        <td><%= locals.released %></td>
+                        <td><%= locals.country %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game of thrones</title>
+    <title>Game of thrones | Home</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <div class="content">
             <h1>Are you a Game Of Thrones lover?</h1>
             <h2>We have all the data from the universe of Ice And Fire you've ever wanted!</h2>
-            <h3>Do you have anything in mind to inquire about? Below are the main categories to start with.</h3>
+            <h3>Do you have anything in mind to inquire about? <br /> Below are the main categories to start with.</h3>
             <button id="openBooks" class="selector">Books</button>
             <button id="openCharacters" class="selector">Characters</button>
             <button id="openHouses" class="selector">Houses</button>
@@ -22,14 +22,19 @@
     <div class="modal-content">
       <div class="modal-header">
         <span id="closeBooks" class="close">&times;</span>
-        <h2>Books</h2>
+        <h4>Books</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the Modal Body</p>
-        <p>Some other text...</p>
-      </div>
-      <div class="modal-footer">
-        <h3>Modal Footer</h3>
+        <h5>Select the book you want to get the details about</h5>
+        <form action="/book" method="post">
+          <select name="id">
+            <option class="options" value="0">SELECT</option>
+            <% for(let i = 1; i < (12 + 1); i++){ %>
+            <option class="options" value="<%= i %>"><%= i %></option>
+            <% } %>  
+          </select>
+          <input type="submit" name="book" value="Go!">
+        </form>
       </div>
     </div>
 </div>
@@ -38,14 +43,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <span id="closeCharacters" class="close">&times;</span>
-        <h2>Characters</h2>
+        <h4>Characters</h4>
       </div>
       <div class="modal-body">
         <p>Some text in the Modal Body</p>
         <p>Some other text...</p>
-      </div>
-      <div class="modal-footer">
-        <h3>Modal Footer</h3>
       </div>
     </div>
 </div>
@@ -54,14 +56,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <span id="closeHouses" class="close">&times;</span>
-        <h2>Houses</h2>
+        <h4>Houses</h4>
       </div>
       <div class="modal-body">
         <p>Some text in the Modal Body</p>
         <p>Some other text...</p>
-      </div>
-      <div class="modal-footer">
-        <h3>Modal Footer</h3>
       </div>
     </div>
 </div>

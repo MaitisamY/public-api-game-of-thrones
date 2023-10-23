@@ -1,0 +1,166 @@
+body {
+    background: rgb(51,28,14);
+    background: linear-gradient(90deg, rgba(51,28,14,1) 0%, rgba(103,51,30,1) 53%, rgba(185,84,12,1) 100%);
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+  font-family: "Game of thrones";
+  src: url('/fonts/got.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main {
+    display: grid;
+    height: 92vh;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    place-content: center;
+    align-content: center;
+    justify-items: center;
+    place-items: center;
+    align-items: center;
+    font-family: 'Game of thrones';
+    word-spacing: 7px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+    width: 40%;
+    height: fit-content;
+    background-color: #FFF190;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.36);
+}
+
+.content h1 {
+    grid-area: 1 / 1 / 1 / 4;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000b3;
+}
+
+.content h2 {
+    grid-area: 2 / 1 / 2 / 4;
+    text-align: center;
+    font-size: 22px;
+    color: #000000b3;
+}
+
+.content h3 {
+    grid-area: 3 / 1 / 3 / 4;
+    text-align: center;
+    font-size: 18px;
+    color: #000000b3;
+}
+
+.selector {
+    background-color: transparent;
+    width: 80%;
+    height: auto;
+    text-align: center;
+    padding: 50px 20px;
+    place-self: center;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    font-size: 15px;
+    border: 2px solid #FFF190;
+    font-family: 'Game of thrones';
+}
+
+.selector:hover,
+.selector:focus,
+.selector:active {
+    border: 2px solid rgba(185,84,12,1);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+

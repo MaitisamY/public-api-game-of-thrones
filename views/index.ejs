@@ -18,52 +18,52 @@
         </div>
     </div>
     <!-- The Modal -->
-<div id="booksModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span id="closeBooks" class="close">&times;</span>
-        <h4>Books</h4>
+  <div id="booksModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="closeBooks" class="close">&times;</span>
+          <h4>Books</h4>
+        </div>
+        <div class="modal-body">
+          <h5>Select the book you want to get the details about</h5>
+          <form action="/book" method="post">
+            <select name="id">
+              <option class="options" value="0">SELECT</option>
+              <% for(let i = 1; i < (12 + 1); i++){ %>
+              <option class="options" value="<%= i %>"><%= i %></option>
+              <% } %>  
+            </select>
+            <input type="submit" name="book" value="Go!">
+          </form>
+        </div>
       </div>
-      <div class="modal-body">
-        <h5>Select the book you want to get the details about</h5>
-        <form action="/book" method="post">
-          <select name="id">
-            <option class="options" value="0">SELECT</option>
-            <% for(let i = 1; i < (12 + 1); i++){ %>
-            <option class="options" value="<%= i %>"><%= i %></option>
-            <% } %>  
-          </select>
-          <input type="submit" name="book" value="Go!">
-        </form>
-      </div>
-    </div>
-</div>
+  </div>
 
-<div id="charactersModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span id="closeCharacters" class="close">&times;</span>
-        <h4>Characters</h4>
+  <div id="charactersModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="closeCharacters" class="close">&times;</span>
+          <h4>Characters</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>Some text in the Modal Body</p>
-        <p>Some other text...</p>
-      </div>
-    </div>
-</div>
+  </div>
 
-<div id="housesModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span id="closeHouses" class="close">&times;</span>
-        <h4>Houses</h4>
+  <div id="housesModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="closeHouses" class="close">&times;</span>
+          <h4>Houses</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>Some text in the Modal Body</p>
-        <p>Some other text...</p>
-      </div>
-    </div>
-</div>
+  </div>
 
 <script type="text/javascript" src="/js/main.js"></script>
 

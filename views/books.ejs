@@ -5,34 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of thrones | Books</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        table {
+            grid-area: 1 / 1 / 3 / 4;
+            font-family: 'Vogue';
+            width: 100%;
+            text-align: center;
+            place-self: center;
+            justify-self: center;
+            align-self: center;
+        }
+
+        table th {
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        table td {
+            font-size: 18px;
+            padding: 10px 20px;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
     <div class="main">
         <div class="content">
             <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Authors</th>
-                        <th>Pages</th>
-                        <th>Publisher</th>
-                        <th>Released</th>
-                        <th>Country</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><%= locals.name %></td>
-                        <td><%= locals.authors %></td>
-                        <td><%= locals.pages %></td>
-                        <td><%= locals.publisher %></td>
-                        <td><%= locals.released %></td>
-                        <td><%= locals.country %></td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th>Book #</th>
+                    <td><%= locals.id %></td>
+                </tr>
+                <tr>
+                    <th>Book Name</th>
+                    <td><%= locals.name %></td>
+                </tr>
+                <tr>
+                    <th>Authors</th>
+                    <td><%= locals.authors %></td>
+                </tr>
+                <tr>
+                    <th>Pages</th>
+                    <td><%= locals.pages %></td>
+                </tr>
+                <tr>
+                    <th>Publisher</th>
+                    <td><%= locals.publisher %></td>
+                </tr>
+                <tr>
+                    <th>Released</th>
+                    <td><%= locals.released %></td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td><%= locals.country %></td>
+                </tr>
+                <tr>
+                    <th>Media Type</th>
+                    <td><%= locals.mediaType %></td>
+                </tr>
             </table>
+            <h5>Do you have anything in mind to inquire about? <br /> Below are the main categories to start with.</h4>
+            <button id="openBooks" class="selector active">Books</button>
+            <button id="openCharacters" class="selector">Characters</button>
+            <button id="openHouses" class="selector">Houses</button>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="booksModal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span id="closeBooks" class="close">&times;</span>
+            <h4>Books</h4>
+        </div>
+        <div class="modal-body">
+            <h5>Select the book you want to get the details about</h5>
+            <form action="/book" method="post">
+            <select name="id">
+                <option class="options" value="0">SELECT</option>
+                <% for(let i = 1; i < (12 + 1); i++){ %>
+                <option class="options" value="<%= i %>"><%= i %></option>
+                <% } %>  
+            </select>
+            <input type="submit" name="book" value="Go!">
+            </form>
+        </div>
         </div>
     </div>
 
+    <div id="charactersModal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span id="closeCharacters" class="close">&times;</span>
+            <h4>Characters</h4>
+        </div>
+        <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        </div>
+    </div>
+
+    <div id="housesModal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span id="closeHouses" class="close">&times;</span>
+            <h4>Houses</h4>
+        </div>
+        <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>

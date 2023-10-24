@@ -20,12 +20,14 @@ app.post("/book", async (req, res) => {
     const result = await axios.get(`${API_URL}/books/${id}`);
     console.log(id);
     res.render("books.ejs", {
+        id : id,
         name : JSON.stringify(result.data.name),
         authors : JSON.stringify(result.data.authors),
         pages : JSON.stringify(result.data.numberOfPages),
         publisher : JSON.stringify(result.data.publisher),
         released : JSON.stringify(result.data.released),
-        country : JSON.stringify(result.data.country)
+        country : JSON.stringify(result.data.country),
+        mediaType : JSON.stringify(result.data.mediaType)
     });
 });
 

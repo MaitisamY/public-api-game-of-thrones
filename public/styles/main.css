@@ -71,6 +71,7 @@ body {
     font-size: 22px;
     color: #67331e;
     font-family: 'Vogue';
+    line-height: 25px;
 }
 
 .content h4 {
@@ -89,6 +90,7 @@ body {
     color: #67331e;
     font-family: 'Vogue';
     border-top: 1px solid #d3bc24;
+    line-height: 25px;
 }
 
 
@@ -257,6 +259,25 @@ input[type=submit]:active {
     transition: 0.3s ease-in;
 }
 
+.go-back {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    font-family: 'Vogue';
+    border-radius: 40px;
+    border: none;
+    background-color: #FFF190;
+    color: #97460c;
+    text-decoration: none;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.go-back:hover { 
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
 
 /* Add Animation */
 @-webkit-keyframes slideIn {

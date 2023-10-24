@@ -80,7 +80,6 @@ app.post("/house", async (req, res) => {
             coatOfArms : JSON.stringify(result.data.coatOfArms),
             words : JSON.stringify(result.data.words),
             titles : JSON.stringify(result.data.titles),
-            currentLord : JSON.stringify(result.data.currentLord),
             founder : JSON.stringify(result.data.founder),
             ancestralWeapons : JSON.stringify(result.data.ancestralWeapons)
         });

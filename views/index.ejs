@@ -40,32 +40,39 @@
   </div>
 
   <div id="charactersModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span id="closeCharacters" class="close">&times;</span>
-          <h4>Characters</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the Modal Body</p>
-          <p>Some other text...</p>
-        </div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="closeCharacters" class="close">&times;</span>
+        <h4>Characters</h4>
       </div>
-  </div>
+      <div class="modal-body">
+        <h5>Do you know that there are 2138 characters in the world of Ice and Fire!</h5>
+        <h6>Type in the value 583 and 823 in the search box to find out who they are. The rest is for you to discover!</h6>
+        <form action="/character" method="post">
+            <input type="search" name="id" placeholder="Type in any value from 1 to 2138" autocomplete="on"> 
+            <input type="submit" name="character" value="Go!">
+        </form>
+      </div>
+    </div>
+</div>
 
-  <div id="housesModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span id="closeHouses" class="close">&times;</span>
-          <h4>Houses</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the Modal Body</p>
-          <p>Some other text...</p>
-        </div>
+<div id="housesModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="closeHouses" class="close">&times;</span>
+        <h4>Houses</h4>
       </div>
-  </div>
+      <div class="modal-body">
+        <h5>Do you know that there are 444 houses in the world of Ice and Fire!</h5>
+        <h6>Type in the value in the search box to find about a house you may not heard of!</h6>
+        <form action="/house" method="post">
+            <input type="search" name="id" placeholder="Type in any value from 1 to 444" autocomplete="on"> 
+            <input type="submit" name="house" value="Go!">
+        </form>
+      </div>
+    </div>
+</div>
 
 <script type="text/javascript" src="/js/main.js"></script>
-
 </body>
 </html>

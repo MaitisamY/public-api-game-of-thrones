@@ -96,6 +96,7 @@ body {
 
 .selector {
     background-color: transparent;
+    margin-top: 30px;
     width: 80%;
     height: auto;
     text-align: center;
@@ -153,7 +154,8 @@ body {
     left: 30%;
     background-color: #FFF190;
     width: 40%;
-    height: 40%;
+    max-height: 60%;
+    min-height: 40%;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
@@ -195,8 +197,16 @@ body {
     color: #FFF190;
 }
 
+.modal h6 {
+    text-align: center;
+    font-size: 15px;
+    color: #67331e;
+    font-family: 'Vogue';
+    line-height: 25px;
+}
+
 .modal-body {
-    padding: 2px 16px;
+    padding: 5px 16px 20px 16px;
     place-content: center;
     justify-content: center;
     align-content: center;
@@ -259,17 +269,50 @@ input[type=submit]:active {
     transition: 0.3s ease-in;
 }
 
+input[type=search] {
+    padding: 10px 20px;
+    width: 65%;
+    background-color: transparent;
+    border: 2px solid #97460c;
+    outline: none;
+    color: #b9540c;
+    font-size: 20px;
+    font-family: 'Vogue';
+    place-self: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(185, 84, 12, 1);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(185, 84, 12, 1);
+    box-shadow: 0px 0px 5px -2px rgba(185, 84, 12, 1);
+}
+
+input[type=search]:hover,
+input[type=search]:focus,
+input[type=search]:active {
+    color: #67331e;
+    border: 2px solid rgba(185,84,12,1);
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(103,51,30,1);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(103,51,30,1);
+    box-shadow: 0px 0px 5px -2px rgba(103,51,30,1);
+    transition: 0.3s ease-in;
+}
+
+input[type=search]::placeholder {
+    color: #b9540c;
+}
+
 .go-back {
     position: fixed;
-    top: 40px;
+    top: 60px;
     left: 40px;
+    font-size: larger;
     font-family: 'Vogue';
+    font-weight: bold;
     border-radius: 40px;
     border: none;
     background-color: #FFF190;
     color: #97460c;
     text-decoration: none;
-    padding: 10px 30px;
+    padding: 15px 20px;
     cursor: pointer;
 }
 

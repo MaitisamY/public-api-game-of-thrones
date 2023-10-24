@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game of thrones | Books</title>
+    <title>Game of thrones | Houses</title>
     <link rel="stylesheet" href="/styles/main.css">
     <style>
         table {
@@ -36,45 +36,45 @@
         <div class="content">
             <table>
                 <tr>
-                    <th>Book #</th>
+                    <th>House ref #</th>
                     <td><%= locals.id %></td>
                 </tr>
                 <tr>
-                    <th>Book Name</th>
+                    <th>House Name</th>
                     <td><%= locals.name %></td>
                 </tr>
                 <tr>
-                    <th>Authors</th>
-                    <td><%= locals.authors %></td>
+                    <th>Region</th>
+                    <td><%= locals.region %></td>
                 </tr>
                 <tr>
-                    <th>Pages</th>
-                    <td><%= locals.pages %></td>
+                    <th>Coat of Arms</th>
+                    <td><%= locals.coatOfArms %></td>
                 </tr>
                 <tr>
-                    <th>Publisher</th>
-                    <td><%= locals.publisher %></td>
+                    <th>Words</th>
+                    <td><%= locals.words %></td>
                 </tr>
                 <tr>
-                    <th>Released</th>
-                    <td><%= locals.released %></td>
+                    <th>Titles</th>
+                    <td><%= locals.titles %></td>
                 </tr>
                 <tr>
-                    <th>Country</th>
-                    <td><%= locals.country %></td>
+                    <th>Current Lord</th>
+                    <td><%= locals.currentLord %></td>
                 </tr>
                 <tr>
-                    <th>Media Type</th>
-                    <td><%= locals.mediaType %></td>
+                    <th>Founder</th>
+                    <td><%= locals.founder %></td>
                 </tr>
                 <tr>
-                    <th>Characters</th>
-                    <td><%= locals.characters %></td>
+                    <th>Ancestral Weapons</th>
+                    <td><%= locals.ancestralWeapons %></td>
                 </tr>
             </table>
-            <button id="openBooks" class="selector active">Books</button>
+            <button id="openBooks" class="selector">Books</button>
             <button id="openCharacters" class="selector">Characters</button>
-            <button id="openHouses" class="selector">Houses</button>
+            <button id="openHouses" class="selector active">Houses</button>
         </div>
     </div>
     <!-- The Modal -->

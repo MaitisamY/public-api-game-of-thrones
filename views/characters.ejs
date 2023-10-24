@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game of thrones | Books</title>
+    <title>Game of thrones | Characters</title>
     <link rel="stylesheet" href="/styles/main.css">
     <style>
         table {
@@ -36,44 +36,52 @@
         <div class="content">
             <table>
                 <tr>
-                    <th>Book #</th>
+                    <th>Character ref #</th>
                     <td><%= locals.id %></td>
                 </tr>
                 <tr>
-                    <th>Book Name</th>
+                    <th>Name</th>
                     <td><%= locals.name %></td>
                 </tr>
                 <tr>
-                    <th>Authors</th>
-                    <td><%= locals.authors %></td>
+                    <th>Gender</th>
+                    <td><%= locals.gender %></td>
                 </tr>
                 <tr>
-                    <th>Pages</th>
-                    <td><%= locals.pages %></td>
+                    <th>Culture</th>
+                    <td><%= locals.culture %></td>
                 </tr>
                 <tr>
-                    <th>Publisher</th>
-                    <td><%= locals.publisher %></td>
+                    <th>Born</th>
+                    <td><%= locals.born %></td>
                 </tr>
                 <tr>
-                    <th>Released</th>
-                    <td><%= locals.released %></td>
+                    <th>Died</th>
+                    <td><%= locals.died %></td>
                 </tr>
                 <tr>
-                    <th>Country</th>
-                    <td><%= locals.country %></td>
+                    <th>Aliases</th>
+                    <td><%= locals.aliases %></td>
                 </tr>
                 <tr>
-                    <th>Media Type</th>
-                    <td><%= locals.mediaType %></td>
+                    <th>Titles</th>
+                    <td><%= locals.titles %></td>
                 </tr>
                 <tr>
-                    <th>Characters</th>
-                    <td><%= locals.characters %></td>
+                    <th>Books In</th>
+                    <td><%= locals.books %></td>
+                </tr>
+                <tr>
+                    <th>Tv series</th>
+                    <td><%= locals.tvSeries %></td>
+                </tr>
+                <tr>
+                    <th>Played by</th>
+                    <td><%= locals.playedBy %></td>
                 </tr>
             </table>
-            <button id="openBooks" class="selector active">Books</button>
-            <button id="openCharacters" class="selector">Characters</button>
+            <button id="openBooks" class="selector">Books</button>
+            <button id="openCharacters" class="selector active">Characters</button>
             <button id="openHouses" class="selector">Houses</button>
         </div>
     </div>

@@ -55,3 +55,4 @@ window.onclick = function(event) {
     housesModal.style.display = "none";
   }
 }
+

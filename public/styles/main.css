@@ -301,6 +301,7 @@ input[type=search]::placeholder {
 }
 
 .go-back {
+    display: block;
     position: fixed;
     top: 60px;
     left: 40px;
@@ -322,6 +323,10 @@ input[type=search]::placeholder {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
+.go-back-responsive {
+    display: none;
+}
+
 /* Add Animation */
 @-webkit-keyframes slideIn {
     from {bottom: -300px; opacity: 0} 
@@ -341,5 +346,129 @@ input[type=search]::placeholder {
 @keyframes fadeIn {
     from {opacity: 0} 
     to {opacity: 1}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1440px) {
+    .selector {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main {
+        display: flex;
+        height: auto;
+        padding: 6px;
+        justify-content: center;
+        place-content: center;
+        align-content: center;
+        justify-items: center;
+        place-items: center;
+        align-items: center;
+    }
+    
+    .content {
+        padding: 5px 20px;
+        width: 100%;
+        justify-content: center;
+        place-content: center;
+        align-content: center;
+        justify-items: center;
+        place-items: center;
+        align-items: center;
+    }
+    
+    .content h1 {
+        width: 90%;
+        text-align: center;
+        word-wrap: break-word;
+        font-size: 1.5rem;
+    }
+    
+    .content h2 {
+        text-align: center;
+        word-wrap: break-word;
+        width: 90%;
+        font-size: 22px;
+    }
+    
+    .content h3 {
+        text-align: center;
+        word-wrap: break-word;
+        width: 90%;
+        font-size: 18px;
+    }
+    
+    .content h4 {
+        text-align: center;
+        word-wrap: break-word;
+        width: 90%;
+        font-size: 22px;
+    }
+    
+    .content h5 {
+        text-align: center;
+        word-wrap: break-word;
+        width: 90%;
+        font-size: 18px;
+    }
+    .selector {
+        margin-top: 15px;
+        width: 90%;
+        font-size: 14px;
+        height: auto;
+        text-align: center;
+        padding: 20px 20px;
+        border: none;
+        font-family: 'Vogue';
+        -webkit-box-shadow: 0px 0px 5px -2px rgba(185,84,12,0.0);
+        -moz-box-shadow: 0px 0px 5px -2px rgba(185,84,12,0.0);
+        box-shadow: 0px 0px 5px -2px rgba(185,84,12,0.0);
+    }
+    
+    .selector:hover,
+    .selector:focus,
+    .selector:active, 
+    .selector.active {
+        color: #67331e;
+        transition: 0.3s ease-in;
+        border: none;
+        -webkit-box-shadow: 0px 0px 5px -2px rgba(103,51,30,0.0);
+        -moz-box-shadow: 0px 0px 5px -2px rgba(103,51,30,0.0);
+        box-shadow: 0px 0px 5px -2px rgba(103,51,30,0.0);
+    }
+
+    .modal-content {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-height: 70%;
+        min-height: 50%;
+    }
+
+    .go-back {
+        display: none;
+    }
+    .go-back-responsive {
+        display: block;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        left: 45%;
+        font-family: 'Vogue';
+        font-weight: bold;
+        background-color: #b9540c;
+        color: #FFF190;
+        text-decoration: none;
+        padding: 7px 12px;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .go-back-responsive:hover { 
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    }
 }
 
